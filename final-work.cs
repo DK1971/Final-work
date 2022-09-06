@@ -3,17 +3,20 @@ using System.Linq;
 
 namespace Exercise
 {
-    class Program
+    	class Program
 	{
 		static void Main(string[] args)
 		{	
  			void Exercise()
 			{
-                Console.WriteLine("Задаём первоначальный массив из строк:" );
+                		Console.WriteLine("Задаём первоначальный массив из строк:" );
 				string[] array1 = { "123", "zero", "one", "2", "two", "three", ":-)", "four"};
 				string[] array2 = new string [array1.Length];
-
-                void PrintArray (string[]array)
+				PrintArray(array1);
+        			SecondArray(array1, array2);
+				PrintArray(array2);
+				
+                		void PrintArray (string[]array)
 				{
 					for (int i = 0; i < array.Length; i++)
 					{
@@ -22,21 +25,21 @@ namespace Exercise
 					Console.WriteLine();
 				}	
                 
-                void SecondArray(string[] array1, string[] array2)
+                		void SecondArray(string[] array1, string[] array2)
 				{
 					int count = 0;
-                    Console.WriteLine("Вывод строк, длина которых <= 3 символа:" );
+                    			Console.WriteLine("Вывод строк, длина которых <= 3 символа:" );
 					for (int i = 0; i < array1.Length; i++)
-  				    {
+  				    	{
   					    if(array1[i].Length <= 3)
   					    {
-  					     array2[count] = array1[i];
+  					    array2[count] = array1[i];
   					    count++;
   					    }
-                    }
-                }
-            }
-            //void Exercise();
-        }
-    }
+                    			}
+                		}
+            		}
+            	//Exercise();
+        	}
+    	}
 }
